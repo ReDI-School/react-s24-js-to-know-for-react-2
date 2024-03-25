@@ -43,7 +43,7 @@ function SpreadRest() {
     // 5. then using array destructuring, let's retrieve the keys from doneosaurus's digestive tract in one go
     const [,keyA, keyB] = digestiveTractContents
     
-    const tryOpeningChest = (keyA, keyB, saurus) => `${keyA}+${keyB}🔓: ${saurus.name} is ${saurus.alive?"alive":`deceased - struck by a ${saurus.struck}`}`
+    const tryOpeningChest = (keyA, keyB, {name, alive, struck}) => `${keyA}+${keyB}🔓: ${name} is ${alive?"alive":`deceased - struck by a ${struck}`}`
 
     //console.log(tryOpeningChest(keyA, keyB, doneosaurus))
 

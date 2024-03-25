@@ -1,10 +1,11 @@
-import { useState } from 'react'
 import './App.css'
+import BonusFuncs from './BonusFuncs'
 import SpreadRest from './SpreadRest'
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  // if (false) {
+  //   return <BonusFuncs />
+  // }
   return (
     <>
       <div>

@@ -34,37 +34,6 @@ function BonusFuncs() {
         }
       ];
       
-
-      // is every dog Trusting?
-      console.log(
-        "is every dog Trusting?",
-        dogs.every((dog) => dog.temperament.includes("Trusting"))
-      );
-      
-      // is every dog Intelligent?
-      console.log(
-        "is every dog Intelligent?",
-        dogs.every((dog) => dog.temperament.includes("Intelligent"))
-      );
-      
-      // can I get a list of all of the temperaments?
-      console.log(
-        "all temperaments",
-        dogs.flatMap((dog) => dog.temperament)
-      );
-      
-      // can I get that same list, but without repeats?
-      console.log(
-        "all temperaments",
-        Array.from(new Set(dogs.flatMap((dog) => dog.temperament)))
-      );
-      
-      console.log(
-        "index of the kind dog",
-        dogs.findIndex((dog) => dog.temperament.includes("Kind"))
-      );
-
-      
     return <>
         {/* find the one with name: Bernese Mountain Dog */}
         <ShowDog
@@ -84,6 +53,9 @@ function BonusFuncs() {
             test={dogs.every((dog) => dog.temperament.includes("Intelligent"))} />
         <ListDogs
             description={"All temperaments"}
+            dogs={dogs.flatMap(dog => dog.temperament)} />
+        <ListDogs
+            description={"All temperaments (no repeats)"}
             dogs={Array.from(new Set(dogs.flatMap(dog => dog.temperament)))} />
         <ShowDog
             description={"Index of the kind dog"}

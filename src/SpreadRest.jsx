@@ -61,16 +61,16 @@ function SpreadRest() {
                 <p>There are still monsters lurking in the fields...</p>
                 <p>We need to defeat <b>{name}</b>!</p>
                 <p>This monster has eaten {amountOfKeys} keys already!</p>
-                <p>We can read our foe's thoughts: &quot;<i>{thought}</i>&quot;</p>
-                <p>Things in our foe's digestive tract:</p>
+                <p>We can read our foe&apos;s thoughts: &quot;<i>{thought}</i>&quot;</p>
+                <p>Things in our foe&apos;s digestive tract:</p>
                 <p>{first} - our foe just ate it. {second} - that was eaten right before.<br/> But before that, all of these were devoured: {remainder.join(", ")}</p>
             </div>
         </>
     } else {
         return <>
-            <p>We defeated {doneosaurusName}! Let's go open that chest we found!</p>
+            <p>We defeated {doneosaurusName}! Let&apos;s go open that chest we found!</p>
             <p><b>{keyA}</b> and <b>{keyB}</b> used together to open the chest...</p>
-            {(tryOpeningChest(keyA, keyB, doneosaurus) === "🟩🗝+⬜🗝🔓: Doneosaurus is deceased - struck by a sword") ? <span>Yay! You found: <MapFilterReduce /></span> : <span>The chest won't budge ☹</span>}
+            {(tryOpeningChest(keyA, keyB, doneosaurus) === "🟩🗝+⬜🗝🔓: Doneosaurus is deceased - struck by a sword") ? <span>Yay! You found: <MapFilterReduce /></span> : <span>The chest won&apos;t budge ☹</span>}
         </>
     }
 }

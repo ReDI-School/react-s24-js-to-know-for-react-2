@@ -1,5 +1,5 @@
 import './App.css'
-import BonusFuncs from './BonusFuncs'
+//import BonusFuncs from './BonusFuncs'
 import SpreadRest from './SpreadRest'
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
         <SpreadRest />
       </div>
       <p className="read-the-docs">
-        Let's go on some Javascript adventures!
+        Let&apos;s go on some Javascript adventures!
       </p>
     </>
   )

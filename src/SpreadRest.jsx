@@ -22,31 +22,26 @@ function SpreadRest() {
     // missions: 
     
     // 1. Identify our foe and its thoughts in less lines of code.
-    const name = objectosaurus.name
-    const thought = objectosaurus.internalOrgans.brain.thought
-    const stomachContents = objectosaurus.internalOrgans.stomach.contents
-    const intestinesContents = objectosaurus.internalOrgans.intestines.contents
+    const {name, internalOrgans: {
+            brain: {thought},
+            stomach: {contents: stomachContents},
+            intestines: {contents: intestinesContents}}} = objectosaurus
     
     // 2. Count the amount of keys in our foe's, with using less characters 
-    const digestiveTractContents = stomachContents.concat(intestinesContents)
+    const digestiveTractContents = [...stomachContents, ...intestinesContents]
     const amountOfKeys = digestiveTractContents.length
 
     // 3. Find the first and second keys in the foe's digestive tract, in one line
-    const first = digestiveTractContents[0]
-    const second = digestiveTractContents[1]
-    const remainder = digestiveTractContents.slice(2)
-
+    const [first, second, ...remainder] = digestiveTractContents
     
     // 4. Using object destructuring and restructuring, defeat the foe in a single line of code with your sword!
-    const doneosaurus = objectosaurus
+    const doneosaurus = {...objectosaurus, alive: false, name: "Doneosaurus", struck: "sword"}
     
     // 5. Let's check if doneosaurus is alive in a novel way, along with their name, in a single swoop
-    const doneosaurusIsAlive = doneosaurus.alive
-    const doneosaurusName = doneosaurus.name
-
+    const {alive: doneosaurusIsAlive, name: doneosaurusName} = doneosaurus
+    
     // 5. then using array destructuring, let's retrieve the keys from doneosaurus's digestive tract in one go
-    const keyA = null
-    const keyB = null
+    const [,keyA, keyB] = digestiveTractContents
     
     const tryOpeningChest = (keyA, keyB, saurus) => `${keyA}+${keyB}🔓: ${saurus.name} is ${saurus.alive?"alive":`deceased - struck by a ${saurus.struck}`}`
 

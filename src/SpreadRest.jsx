@@ -22,29 +22,29 @@ function SpreadRest() {
     // missions: 
     
     // 1. Identify our foe and its thoughts in less lines of code.
-    const nameOfOurFoe = objectosaurus.name
-    const thoughtsOfOurFoe = objectosaurus.internalOrgans.brain.thought
-    const thingsInStomach = objectosaurus.internalOrgans.stomach.contents
-    const thingsInIntestines = objectosaurus.internalOrgans.intestines.contents
+    const name = objectosaurus.name
+    const thought = objectosaurus.internalOrgans.brain.thought
+    const stomachContents = objectosaurus.internalOrgans.stomach.contents
+    const intestinesContents = objectosaurus.internalOrgans.intestines.contents
     
     // 2. Count the amount of keys in our foe's, with using less characters 
-    const thingsInDigestiveTract = thingsInStomach.concat(thingsInIntestines)
-    const amountOfKeys = thingsInDigestiveTract.length
+    const digestiveTractContents = stomachContents.concat(intestinesContents)
+    const amountOfKeys = digestiveTractContents.length
 
-    // 3. Find the first and second keys in the foe's digestive tract
-    const first = thingsInDigestiveTract[0]
-    const second = thingsInDigestiveTract[1]
-    const remainder = thingsInDigestiveTract.slice(2)
+    // 3. Find the first and second keys in the foe's digestive tract, in one line
+    const first = digestiveTractContents[0]
+    const second = digestiveTractContents[1]
+    const remainder = digestiveTractContents.slice(2)
 
     
-    // 4. Using object destructuring and restructuring, defeat the foe in a single line of code!
+    // 4. Using object destructuring and restructuring, defeat the foe in a single line of code with your sword!
     const doneosaurus = objectosaurus
     
-    // 5. Let's check if doneosaurus is alive in a novel way
+    // 5. Let's check if doneosaurus is alive in a novel way, along with their name, in a single swoop
     const doneosaurusIsAlive = doneosaurus.alive
     const doneosaurusName = doneosaurus.name
 
-    // 5. then using array destructuring, let's retrieve the keys from doneosaurus's digestive tract
+    // 5. then using array destructuring, let's retrieve the keys from doneosaurus's digestive tract in one go
     const keyA = null
     const keyB = null
     
@@ -59,9 +59,9 @@ function SpreadRest() {
         return <>
             <div>
                 <p>There are still monsters lurking in the fields...</p>
-                <p>We need to defeat <b>{nameOfOurFoe}</b>!</p>
+                <p>We need to defeat <b>{name}</b>!</p>
                 <p>This monster has eaten {amountOfKeys} keys already!</p>
-                <p>We can read our foe's thoughts: &quot;<i>{thoughtsOfOurFoe}</i>&quot;</p>
+                <p>We can read our foe's thoughts: &quot;<i>{thought}</i>&quot;</p>
                 <p>Things in our foe's digestive tract:</p>
                 <p>{first} - our foe just ate it. {second} - that was eaten right before.<br/> But before that, all of these were devoured: {remainder.join(", ")}</p>
             </div>
